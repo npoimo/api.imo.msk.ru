@@ -209,6 +209,11 @@
       },
       "type": "string",
       "required": true
+    },
+    "teachers": {
+      "collection": "teacher",
+      "via": "programs",
+      "dominant": true
     }
   }
 }
