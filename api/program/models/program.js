@@ -17,7 +17,7 @@ module.exports = {
       data.studyForm === 'Fulltime' && (data.studyFormLabel = 'Очная')
 
       data.type === 'Course' && (data.typeLabel = 'Курс')
-      data.type === 'Retraining' && (data.typeLabel = 'Профессия')
+      data.type === 'Profession' && (data.typeLabel = 'Профессия')
     },
     beforeUpdate: async (params, data) => {
       data.title && (data.slug = slugify(data.title, { lower: true }))
@@ -27,7 +27,7 @@ module.exports = {
       data.studyForm === 'Fulltime' && (data.studyFormLabel = 'Очная')
 
       data.type === 'Course' && (data.typeLabel = 'Курс')
-      data.type === 'Retraining' && (data.typeLabel = 'Профессия')
+      data.type === 'Profession' && (data.typeLabel = 'Профессия')
     }
   }
 }
