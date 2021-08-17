@@ -28,9 +28,7 @@
     "heroPicture": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
       "required": true,
       "pluginOptions": {
@@ -56,11 +54,7 @@
         }
       },
       "type": "enumeration",
-      "enum": [
-        "Blended",
-        "Online",
-        "Fulltime"
-      ],
+      "enum": ["Blended", "Online", "Fulltime"],
       "required": true,
       "default": "Blended"
     },
@@ -71,10 +65,7 @@
         }
       },
       "type": "enumeration",
-      "enum": [
-        "Course",
-        "Retraining"
-      ],
+      "enum": ["Course", "Profession"],
       "required": true,
       "default": "Course"
     },
@@ -200,6 +191,20 @@
         }
       },
       "type": "string"
+    },
+    "studyField": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "teachers": {
+      "collection": "teacher",
+      "via": "programs",
+      "dominant": true
     }
   }
 }

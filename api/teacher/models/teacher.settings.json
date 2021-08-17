@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "teachers",
   "info": {
-    "name": "Teacher"
+    "name": "Teacher",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -14,6 +15,32 @@
     "firstName": {
       "type": "string",
       "required": true
+    },
+    "portrait": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "biography": {
+      "type": "text",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "firstName"
+    },
+    "programs": {
+      "via": "teachers",
+      "collection": "program"
     }
   }
 }

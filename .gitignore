@@ -109,3 +109,4 @@ build
 .strapi-updater.json
 
 .vscode
+package-lock.json
