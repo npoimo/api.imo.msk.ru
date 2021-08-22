@@ -18,6 +18,13 @@ module.exports = {
 
       data.type === 'Course' && (data.typeLabel = 'Курс')
       data.type === 'Profession' && (data.typeLabel = 'Профессия')
+
+      data.type === 'Course' &&
+        (data.typeFullLabel =
+          'Дополнительная профессиональная программа повышения квалификации')
+      data.type === 'Profession' &&
+        (data.typeFullLabel =
+          'Дополнительная профессиональная программа профессиональной переподготовки')
     },
     beforeUpdate: async (params, data) => {
       data.title && (data.slug = slugify(data.title, { lower: true }))
@@ -28,6 +35,13 @@ module.exports = {
 
       data.type === 'Course' && (data.typeLabel = 'Курс')
       data.type === 'Profession' && (data.typeLabel = 'Профессия')
+
+      data.type === 'Course' &&
+        (data.typeFullLabel =
+          'Дополнительная профессиональная программа повышения квалификации')
+      data.type === 'Profession' &&
+        (data.typeFullLabel =
+          'Дополнительная профессиональная программа профессиональной переподготовки')
     }
   }
 }
