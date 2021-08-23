@@ -12,25 +12,23 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "firstName": {
+    "name": {
       "type": "string",
       "required": true
     },
     "portrait": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
       "required": true,
       "pluginOptions": {}
     },
-    "biography": {
+    "achievements": {
       "type": "text",
       "required": true
     },
-    "title": {
+    "specialization": {
       "type": "string",
       "required": true
     },
