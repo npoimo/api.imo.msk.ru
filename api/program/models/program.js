@@ -11,6 +11,8 @@ module.exports = {
   lifecycles: {
     beforeCreate: async data => {
       data.title && (data.slug = slugify(data.title, { lower: true }))
+      data.studyField &&
+        (data.studyFieldSlug = slugify(data.studyField, { lower: true }))
 
       data.studyForm === 'Blended' && (data.studyFormLabel = 'Очно-заочная')
       data.studyForm === 'Online' && (data.studyFormLabel = 'Заочная')
@@ -28,6 +30,8 @@ module.exports = {
     },
     beforeUpdate: async (params, data) => {
       data.title && (data.slug = slugify(data.title, { lower: true }))
+      data.studyField &&
+        (data.studyFieldSlug = slugify(data.studyField, { lower: true }))
 
       data.studyForm === 'Blended' && (data.studyFormLabel = 'Очно-заочная')
       data.studyForm === 'Online' && (data.studyFormLabel = 'Заочная')
