@@ -222,6 +222,15 @@
         }
       },
       "type": "string"
+    },
+    "studyFieldChunk": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "uid",
+      "targetField": "studyField"
     }
   }
 }
