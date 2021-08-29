@@ -28,9 +28,7 @@
     "heroPicture": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
       "required": true,
       "pluginOptions": {
@@ -56,13 +54,9 @@
         }
       },
       "type": "enumeration",
-      "enum": [
-        "Blended",
-        "Online",
-        "Fulltime"
-      ],
+      "enum": ["Blended", "Online", "Fulltime"],
       "required": true,
-      "default": "Blended"
+      "default": "Online"
     },
     "type": {
       "pluginOptions": {
@@ -71,10 +65,7 @@
         }
       },
       "type": "enumeration",
-      "enum": [
-        "Course",
-        "Profession"
-      ],
+      "enum": ["Course", "Profession"],
       "required": true,
       "default": "Course"
     },
