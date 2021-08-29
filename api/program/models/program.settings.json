@@ -220,8 +220,7 @@
           "localized": true
         }
       },
-      "type": "uid",
-      "targetField": "studyField"
+      "type": "string"
     },
     "price": {
       "pluginOptions": {
