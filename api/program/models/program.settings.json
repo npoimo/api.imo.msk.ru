@@ -86,7 +86,7 @@
       },
       "type": "richtext",
       "required": true,
-      "maxLength": 500
+      "maxLength": 300
     },
     "studyFormLabel": {
       "pluginOptions": {
