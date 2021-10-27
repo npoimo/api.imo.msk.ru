@@ -258,6 +258,16 @@
       },
       "type": "richtext",
       "required": true
+    },
+    "qnas": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "general.qn-a"
     }
   }
 }

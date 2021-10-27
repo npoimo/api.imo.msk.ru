@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_general_qn_as",
+  "info": {
+    "name": "qna",
+    "icon": "toilet-paper",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "richtext"
+    }
+  }
+}
