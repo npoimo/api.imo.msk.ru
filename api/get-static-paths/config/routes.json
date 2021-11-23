@@ -1,0 +1,100 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/get-static-paths",
+      "handler": "get-static-paths.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/get-static-paths/study-fields",
+      "handler": "get-static-paths.studyFields",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/get-static-paths/study-fields/course",
+      "handler": "get-static-paths.studyFieldsCourse",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/get-static-paths/study-fields/profession",
+      "handler": "get-static-paths.studyFieldsProfession",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/get-static-paths/programs",
+      "handler": "get-static-paths.programs",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/get-static-paths/programs/course",
+      "handler": "get-static-paths.programsCourse",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/get-static-paths/programs/profession",
+      "handler": "get-static-paths.programsProfession",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/get-static-paths/count",
+      "handler": "get-static-paths.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/get-static-paths/:id",
+      "handler": "get-static-paths.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/get-static-paths",
+      "handler": "get-static-paths.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/get-static-paths/:id",
+      "handler": "get-static-paths.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/get-static-paths/:id",
+      "handler": "get-static-paths.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
