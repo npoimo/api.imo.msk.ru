@@ -10,7 +10,8 @@ module.exports = {
   about: async () => {
     const programs = await getData({
       query: getDataProps.query.program,
-      select: getDataProps.select.program.studyFields
+      select: getDataProps.select.program.studyFields,
+      populate: getDataProps.populate.program.default
     })
 
     return { programs }
@@ -18,7 +19,8 @@ module.exports = {
   contact: async () => {
     const programs = await getData({
       query: getDataProps.query.program,
-      select: getDataProps.select.program.studyFields
+      select: getDataProps.select.program.studyFields,
+      populate: getDataProps.populate.program.default
     })
 
     return { programs }
@@ -26,12 +28,14 @@ module.exports = {
   index: async () => {
     const programs = await getData({
       query: getDataProps.query.program,
-      select: getDataProps.select.program.default
+      select: getDataProps.select.program.default,
+      populate: getDataProps.populate.program.default
     })
 
     const reviews = await getData({
       query: getDataProps.query.review,
-      select: getDataProps.select.review.default
+      select: getDataProps.select.review.default,
+      populate: getDataProps.populate.program.default
     })
 
     return { programs, reviews }
@@ -39,7 +43,8 @@ module.exports = {
   legal: async () => {
     const programs = await getData({
       query: getDataProps.query.program,
-      select: getDataProps.select.program.studyFields
+      select: getDataProps.select.program.studyFields,
+      populate: getDataProps.populate.program.default
     })
 
     return { programs }
@@ -47,7 +52,8 @@ module.exports = {
   payment: async () => {
     const programs = await getData({
       query: getDataProps.query.program,
-      select: getDataProps.select.program.studyFields
+      select: getDataProps.select.program.studyFields,
+      populate: getDataProps.populate.program.default
     })
 
     return { programs }
@@ -55,12 +61,14 @@ module.exports = {
   reviews: async () => {
     const programs = await getData({
       query: getDataProps.query.program,
-      select: getDataProps.select.program.studyFields
+      select: getDataProps.select.program.studyFields,
+      populate: getDataProps.populate.program.default
     })
 
     const reviews = await getData({
       query: getDataProps.query.review,
-      select: getDataProps.select.review.default
+      select: getDataProps.select.review.default,
+      populate: getDataProps.populate.program.default
     })
 
     return { programs, reviews }
@@ -68,12 +76,14 @@ module.exports = {
   teachers: async () => {
     const programs = await getData({
       query: getDataProps.query.program,
-      select: getDataProps.select.program.studyFields
+      select: getDataProps.select.program.studyFields,
+      populate: getDataProps.populate.program.default
     })
 
     const teachers = await getData({
       query: getDataProps.query.teacher,
-      select: getDataProps.select.teacher.default
+      select: getDataProps.select.teacher.default,
+      populate: getDataProps.populate.program.default
     })
 
     return { programs, teachers }
@@ -81,12 +91,14 @@ module.exports = {
   webinars: async () => {
     const programs = await getData({
       query: getDataProps.query.program,
-      select: getDataProps.select.program.studyFields
+      select: getDataProps.select.program.studyFields,
+      populate: getDataProps.populate.program.default
     })
 
     const webinars = await getData({
       query: getDataProps.query.webinar,
-      select: getDataProps.select.webinar.default
+      select: getDataProps.select.webinar.default,
+      populate: getDataProps.populate.program.default
     })
 
     return { programs, webinars }
@@ -94,7 +106,8 @@ module.exports = {
   programs: async () => {
     const programs = await getData({
       query: getDataProps.query.program,
-      select: getDataProps.select.program.default
+      select: getDataProps.select.program.default,
+      populate: getDataProps.populate.program.default
     })
 
     return { programs }
@@ -102,7 +115,8 @@ module.exports = {
   program: async () => {
     const programs = await getData({
       query: getDataProps.query.program,
-      select: getDataProps.select.program.default
+      select: getDataProps.select.program.default,
+      populate: getDataProps.populate.program.default
     })
 
     return { programs }

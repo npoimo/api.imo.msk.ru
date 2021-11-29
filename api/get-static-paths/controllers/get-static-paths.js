@@ -6,16 +6,22 @@
  */
 
 const { getData, getDataProps } = require('../../../helpers')
+const {
+  program
+} = require('../../get-static-props/controllers/get-static-props')
 
 module.exports = {
   studyFields: async () => {
     const programs = await getData({
       query: getDataProps.query.program,
-      select: getDataProps.select.program.pathsStudyFields
+      select: getDataProps.select.program.pathsStudyFields,
+      populate: getDataProps.populate.program.studyFieldSlugs
     })
 
-    const paths = programs.map(({ studyFieldSlug }) => ({
-      params: { studyFieldSlug }
+    const paths = [
+      ...new Set(programs.map(program => program.study_field?.slug))
+    ].map(slug => ({
+      params: { studyFieldSlug: slug }
     }))
 
     return paths
@@ -23,13 +29,21 @@ module.exports = {
   studyFieldsCourse: async () => {
     const programs = await getData({
       query: getDataProps.query.program,
-      select: getDataProps.select.program.pathsStudyFields
+      select: getDataProps.select.program.pathsStudyFields,
+      populate: getDataProps.populate.program.studyFieldSlugs
     })
 
-    const paths = programs
+    const paths = [
+      ...new Set(
+        programs.map(program => ({
+          slug: program.study_field?.slug,
+          type: program.type
+        }))
+      )
+    ]
       .filter(program => program.type.toLowerCase() === 'course')
-      .map(({ studyFieldSlug }) => ({
-        params: { studyFieldSlug }
+      .map(({ slug }) => ({
+        params: { studyFieldSlug: slug }
       }))
 
     return paths
@@ -37,13 +51,14 @@ module.exports = {
   studyFieldsProfession: async () => {
     const programs = await getData({
       query: getDataProps.query.program,
-      select: getDataProps.select.program.pathsStudyFields
+      select: getDataProps.select.program.pathsStudyFields,
+      populate: getDataProps.populate.program.studyFieldSlugs
     })
 
     const paths = programs
       .filter(program => program.type.toLowerCase() === 'profession')
-      .map(({ studyFieldSlug }) => ({
-        params: { studyFieldSlug }
+      .map(({ study_field: { slug } }) => ({
+        params: { studyFieldSlug: slug }
       }))
 
     return paths
@@ -51,11 +66,12 @@ module.exports = {
   programs: async () => {
     const programs = await getData({
       query: getDataProps.query.program,
-      select: getDataProps.select.program.pathsPrograms
+      select: getDataProps.select.program.pathsPrograms,
+      populate: getDataProps.populate.program.studyFieldSlugs
     })
 
-    const paths = programs.map(({ studyFieldSlug, slug }) => ({
-      params: { slug, studyFieldSlug }
+    const paths = programs.map(({ study_field, slug }) => ({
+      params: { slug, studyFieldSlug: study_field.slug }
     }))
 
     return paths
@@ -63,13 +79,14 @@ module.exports = {
   programsCourse: async () => {
     const programs = await getData({
       query: getDataProps.query.program,
-      select: getDataProps.select.program.pathsPrograms
+      select: getDataProps.select.program.pathsPrograms,
+      populate: getDataProps.populate.program.studyFieldSlugs
     })
 
     const paths = programs
       .filter(program => program.type.toLowerCase() === 'course')
-      .map(({ studyFieldSlug, slug }) => ({
-        params: { slug, studyFieldSlug }
+      .map(({ study_field, slug }) => ({
+        params: { slug, studyFieldSlug: study_field.slug }
       }))
 
     return paths
@@ -77,13 +94,14 @@ module.exports = {
   programsProfession: async () => {
     const programs = await getData({
       query: getDataProps.query.program,
-      select: getDataProps.select.program.pathsPrograms
+      select: getDataProps.select.program.pathsPrograms,
+      populate: getDataProps.populate.program.studyFieldSlugs
     })
 
     const paths = programs
       .filter(program => program.type.toLowerCase() === 'profession')
-      .map(({ studyFieldSlug, slug }) => ({
-        params: { slug, studyFieldSlug }
+      .map(({ study_field, slug }) => ({
+        params: { slug, studyFieldSlug: study_field.slug }
       }))
 
     return paths

@@ -49,35 +49,6 @@
       "targetField": "title",
       "required": false
     },
-    "studyForm": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "enumeration",
-      "enum": [
-        "Blended",
-        "Online",
-        "Fulltime"
-      ],
-      "required": true,
-      "default": "Online"
-    },
-    "type": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "enumeration",
-      "enum": [
-        "Course",
-        "Profession"
-      ],
-      "required": true,
-      "default": "Course"
-    },
     "studyMounthsDuration": {
       "pluginOptions": {
         "i18n": {
@@ -97,22 +68,6 @@
       "required": true,
       "maxLength": 300
     },
-    "studyFormLabel": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
-    "typeLabel": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
     "studyHours": {
       "pluginOptions": {
         "i18n": {
@@ -120,24 +75,6 @@
         }
       },
       "type": "biginteger",
-      "required": true
-    },
-    "WhatYouWillLearn": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "richtext",
-      "required": true
-    },
-    "ForWhom": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "richtext",
       "required": true
     },
     "fullTitle": {
@@ -201,35 +138,10 @@
       },
       "type": "string"
     },
-    "studyField": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
-      "required": true
-    },
     "teachers": {
       "collection": "teacher",
       "via": "programs",
       "dominant": true
-    },
-    "typeFullLabel": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
-    "studyFieldSlug": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
     },
     "price": {
       "pluginOptions": {
@@ -250,16 +162,19 @@
       "required": true,
       "default": "30"
     },
-    "questions": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "richtext",
-      "required": true
+    "study_field": {
+      "model": "study-field",
+      "via": "programs"
     },
-    "qnas": {
+    "category": {
+      "via": "programs",
+      "model": "category"
+    },
+    "study_form": {
+      "model": "study-form",
+      "via": "programs"
+    },
+    "whatYouWillLearn": {
       "type": "component",
       "repeatable": true,
       "pluginOptions": {
@@ -267,7 +182,27 @@
           "localized": true
         }
       },
-      "component": "general.qn-a"
+      "component": "program.what-you-will-learn"
+    },
+    "qna": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "program.qn-a"
+    },
+    "forWhom": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "program.for-whom"
     }
   }
 }

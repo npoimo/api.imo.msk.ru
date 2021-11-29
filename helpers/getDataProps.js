@@ -7,11 +7,10 @@ const getDataProps = {
   },
   select: {
     program: {
-      default:
-        'id title slug studyField studyFieldSlug type typeLabel studyMounthsDuration',
-      studyFields: 'id studyField studyFieldSlug',
-      pathsStudyFields: 'id studyFieldSlug type',
-      pathsPrograms: 'id slug studyFieldSlug type'
+      default: 'id title slug type typeLabel studyMounthsDuration study_field',
+      studyFields: 'id study_field',
+      pathsStudyFields: 'id study_field type',
+      pathsPrograms: 'id slug study_field type'
     },
     review: {
       default: 'id name profession title story picture'
@@ -21,6 +20,12 @@ const getDataProps = {
     },
     webinar: {
       default: 'id name date picture title'
+    }
+  },
+  populate: {
+    program: {
+      default: [{ path: 'study_field', select: 'title slug' }],
+      studyFieldSlugs: [{ path: 'study_field', select: 'slug' }]
     }
   }
 }

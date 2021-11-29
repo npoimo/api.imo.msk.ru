@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_program_for_whoms",
+  "info": {
+    "name": "forWhom",
+    "icon": "fingerprint"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "string"
+    }
+  }
+}
