@@ -86,14 +86,6 @@
       "type": "text",
       "required": true
     },
-    "shortContents": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "richtext"
-    },
     "resumeTitle": {
       "pluginOptions": {
         "i18n": {
@@ -110,24 +102,6 @@
         }
       },
       "type": "biginteger",
-      "required": true
-    },
-    "resumeSkills": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "richtext",
-      "required": true
-    },
-    "jobTitles": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "richtext",
       "required": true
     },
     "qualification": {
@@ -171,8 +145,8 @@
       "model": "category"
     },
     "study_form": {
-      "model": "study-form",
-      "via": "programs"
+      "via": "programs",
+      "model": "study-form"
     },
     "whatYouWillLearn": {
       "type": "component",
@@ -184,16 +158,6 @@
       },
       "component": "program.what-you-will-learn"
     },
-    "qna": {
-      "type": "component",
-      "repeatable": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "program.qn-a"
-    },
     "forWhom": {
       "type": "component",
       "repeatable": true,
@@ -203,6 +167,41 @@
         }
       },
       "component": "program.for-whom"
+    },
+    "questions": {
+      "collection": "question",
+      "via": "programs",
+      "dominant": true
+    },
+    "resumeSkills": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "program.resume-skills"
+    },
+    "jobTitles": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "program.job-titles"
+    },
+    "shortContents": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "program.short-contents"
     }
   }
 }

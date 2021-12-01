@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "study_forms",
+  "collectionName": "questions",
   "info": {
-    "name": "studyForm",
-    "description": ""
+    "name": "question"
   },
   "options": {
     "increments": true,
@@ -12,18 +11,15 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "type": {
-      "type": "string"
+    "question": {
+      "type": "richtext"
     },
-    "label": {
-      "type": "string"
+    "answer": {
+      "type": "richtext"
     },
     "programs": {
-      "via": "study_form",
+      "via": "questions",
       "collection": "program"
-    },
-    "slug": {
-      "type": "string"
     }
   }
 }

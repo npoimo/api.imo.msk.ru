@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_program_job_titles",
+  "info": {
+    "name": "jobTitles",
+    "icon": "air-freshener"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "richtext"
+    }
+  }
+}
