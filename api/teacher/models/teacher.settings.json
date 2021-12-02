@@ -14,25 +14,23 @@
   "attributes": {
     "name": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "portrait": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
-      "required": true,
+      "required": false,
       "pluginOptions": {}
     },
     "achievements": {
       "type": "text",
-      "required": true
+      "required": false
     },
     "specialization": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "slug": {
       "type": "uid",

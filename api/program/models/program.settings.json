@@ -28,11 +28,9 @@
     "heroPicture": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
-      "required": true,
+      "required": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -56,7 +54,7 @@
         }
       },
       "type": "biginteger",
-      "required": true
+      "required": false
     },
     "description": {
       "pluginOptions": {
@@ -65,7 +63,7 @@
         }
       },
       "type": "richtext",
-      "required": true,
+      "required": false,
       "maxLength": 300
     },
     "studyHours": {
@@ -75,7 +73,7 @@
         }
       },
       "type": "biginteger",
-      "required": true
+      "required": false
     },
     "fullTitle": {
       "pluginOptions": {
@@ -84,7 +82,7 @@
         }
       },
       "type": "text",
-      "required": true
+      "required": false
     },
     "resumeTitle": {
       "pluginOptions": {
@@ -93,7 +91,7 @@
         }
       },
       "type": "string",
-      "required": true
+      "required": false
     },
     "entrySalary": {
       "pluginOptions": {
@@ -102,7 +100,7 @@
         }
       },
       "type": "biginteger",
-      "required": true
+      "required": false
     },
     "qualification": {
       "pluginOptions": {
@@ -124,7 +122,7 @@
         }
       },
       "type": "biginteger",
-      "required": true
+      "required": false
     },
     "discount": {
       "pluginOptions": {
@@ -133,7 +131,7 @@
         }
       },
       "type": "biginteger",
-      "required": true,
+      "required": false,
       "default": "30"
     },
     "study_field": {
@@ -169,8 +167,8 @@
       "component": "program.for-whom"
     },
     "questions": {
-      "collection": "question",
       "via": "programs",
+      "collection": "question",
       "dominant": true
     },
     "resumeSkills": {
