@@ -28,7 +28,10 @@ const getDataProps = {
         { path: 'study_field', select: 'title slug' },
         { path: 'category', select: 'type label slug' }
       ],
-      studyFieldSlugs: [{ path: 'study_field', select: 'slug' }]
+      studyFieldSlugs: [
+        { path: 'study_field', select: 'slug' },
+        { path: 'category', select: 'type' }
+      ]
     }
   }
 }

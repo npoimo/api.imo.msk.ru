@@ -37,11 +37,11 @@ module.exports = {
       ...new Set(
         programs.map(program => ({
           slug: program.study_field?.slug,
-          type: program.type
+          type: program.category?.type
         }))
       )
     ]
-      .filter(program => program.type.toLowerCase() === 'course')
+      .filter(program => program.category?.type.toLowerCase() === 'course')
       .map(({ slug }) => ({
         params: { studyFieldSlug: slug }
       }))
@@ -56,7 +56,7 @@ module.exports = {
     })
 
     const paths = programs
-      .filter(program => program.type.toLowerCase() === 'profession')
+      .filter(program => program.category?.type.toLowerCase() === 'profession')
       .map(({ study_field: { slug } }) => ({
         params: { studyFieldSlug: slug }
       }))
@@ -84,7 +84,7 @@ module.exports = {
     })
 
     const paths = programs
-      .filter(program => program.type.toLowerCase() === 'course')
+      .filter(program => program.category?.type.toLowerCase() === 'course')
       .map(({ study_field, slug }) => ({
         params: { slug, studyFieldSlug: study_field.slug }
       }))
@@ -99,7 +99,7 @@ module.exports = {
     })
 
     const paths = programs
-      .filter(program => program.type.toLowerCase() === 'profession')
+      .filter(program => program.category?.type.toLowerCase() === 'profession')
       .map(({ study_field, slug }) => ({
         params: { slug, studyFieldSlug: study_field.slug }
       }))
