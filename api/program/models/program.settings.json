@@ -28,7 +28,9 @@
     "heroPicture": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images"],
+      "allowedTypes": [
+        "images"
+      ],
       "plugin": "upload",
       "required": false,
       "pluginOptions": {
@@ -47,15 +49,6 @@
       "targetField": "title",
       "required": false
     },
-    "studyMounthsDuration": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "biginteger",
-      "required": false
-    },
     "description": {
       "pluginOptions": {
         "i18n": {
@@ -65,15 +58,6 @@
       "type": "richtext",
       "required": false,
       "maxLength": 300
-    },
-    "studyHours": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "biginteger",
-      "required": false
     },
     "fullTitle": {
       "pluginOptions": {
@@ -114,25 +98,6 @@
       "collection": "teacher",
       "via": "programs",
       "dominant": true
-    },
-    "price": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "biginteger",
-      "required": false
-    },
-    "discount": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "biginteger",
-      "required": false,
-      "default": "30"
     },
     "study_field": {
       "model": "study-field",
@@ -200,6 +165,30 @@
         }
       },
       "component": "program.short-contents"
+    },
+    "timenprice": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "program.timenprice"
+    },
+    "forWhomPicture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
