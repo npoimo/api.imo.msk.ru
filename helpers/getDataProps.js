@@ -7,7 +7,7 @@ const getDataProps = {
   },
   select: {
     program: {
-      default: 'id title slug category studyMounthsDuration study_field',
+      default: 'id title slug category timenprice study_field',
       studyFields: 'id study_field',
       pathsStudyFields: 'id study_field category',
       pathsPrograms: 'id slug study_field category'
