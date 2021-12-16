@@ -189,6 +189,11 @@
           "localized": true
         }
       }
+    },
+    "sub_study_fields": {
+      "collection": "sub-study-fields",
+      "via": "programs",
+      "dominant": true
     }
   }
 }
