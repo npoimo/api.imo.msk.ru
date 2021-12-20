@@ -66,6 +66,14 @@
     },
     {
       "method": "GET",
+      "path": "/get-static-paths/programs/mba",
+      "handler": "get-static-paths.programsMBA",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/get-static-paths/count",
       "handler": "get-static-paths.count",
       "config": {

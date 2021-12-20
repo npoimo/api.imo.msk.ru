@@ -120,5 +120,20 @@ module.exports = {
       }))
 
     return paths
+  },
+  programsMBA: async () => {
+    const programs = await getData({
+      query: getDataProps.query.program,
+      select: getDataProps.select.program.pathsPrograms,
+      populate: getDataProps.populate.program.studyFieldSlugs
+    })
+
+    const paths = programs
+      .filter(program => program.category?.type.toLowerCase() === 'mba')
+      .map(({ study_field, slug }) => ({
+        params: { slug, studyFieldSlug: study_field.slug }
+      }))
+
+    return paths
   }
 }
