@@ -34,6 +34,14 @@
     },
     {
       "method": "GET",
+      "path": "/get-static-paths/study-fields/mba",
+      "handler": "get-static-paths.studyFieldsMBA",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/get-static-paths/programs",
       "handler": "get-static-paths.programs",
       "config": {
