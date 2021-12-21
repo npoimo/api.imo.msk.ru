@@ -11,6 +11,7 @@ const {
 } = require('../../get-static-props/controllers/get-static-props')
 
 module.exports = {
+  //
   studyFields: async () => {
     const programs = await getData({
       query: getDataProps.query.program,
