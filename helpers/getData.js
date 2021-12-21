@@ -14,3 +14,4 @@ const getData = async ({ query, select, populate = null } = {}) => {
 }
 
 module.exports = getData
+//
