@@ -64,7 +64,7 @@ module.exports = {
 
     return paths
   },
-  studyFieldsMBA: async () => {
+  studyFieldsHMO: async () => {
     const programs = await getData({
       query: getDataProps.query.program,
       select: getDataProps.select.program.pathsStudyFields,
@@ -72,7 +72,7 @@ module.exports = {
     })
 
     const paths = programs
-      .filter(program => program.category?.type.toLowerCase() === 'mba')
+      .filter(program => program.category?.type.toLowerCase() === 'hmo')
       .map(({ study_field: { slug } }) => ({
         params: { studyFieldSlug: slug }
       }))
@@ -122,7 +122,7 @@ module.exports = {
 
     return paths
   },
-  programsMBA: async () => {
+  programsHMO: async () => {
     const programs = await getData({
       query: getDataProps.query.program,
       select: getDataProps.select.program.pathsPrograms,
@@ -130,7 +130,7 @@ module.exports = {
     })
 
     const paths = programs
-      .filter(program => program.category?.type.toLowerCase() === 'mba')
+      .filter(program => program.category?.type.toLowerCase() === 'hmo')
       .map(({ study_field, slug }) => ({
         params: { slug, studyFieldSlug: study_field.slug }
       }))
