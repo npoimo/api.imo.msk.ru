@@ -28,9 +28,7 @@
     "heroPicture": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
       "required": false,
       "pluginOptions": {
@@ -101,11 +99,13 @@
     },
     "study_field": {
       "model": "study-field",
-      "via": "programs"
+      "via": "programs",
+      "required": false
     },
     "category": {
       "via": "programs",
-      "model": "category"
+      "model": "category",
+      "required": true
     },
     "study_form": {
       "via": "programs",
@@ -179,9 +179,7 @@
     "forWhomPicture": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
       "required": false,
       "pluginOptions": {
